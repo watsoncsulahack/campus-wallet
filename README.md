@@ -1,28 +1,38 @@
 # Mick Wallet
 
-A mobile-first landing-page prototype for a university campus payments coursework project.
+A one-viewport, mobile-first campus wallet interface prototype. The live app is designed to feel like a self-hosted progressive web wallet rather than a marketing landing page.
 
-## Phase 1 scope
+## Current demo behavior
 
-- Demonstrate the product concept and visual direction
-- Present a familiar university sign-in-to-wallet flow
-- Make the prototype comfortable on a phone
-- Publish as a static site on GitHub Pages
+- **Student email:** entering a valid email signs in and derives a deterministic, Ethereum-shaped **public demo address** with the browser Web Crypto API.
+- **Connect a wallet:** closes the sign-in dialog and uses a fixed Ethereum-shaped placeholder address.
+- **Signed-in state:** the top-right control turns green and displays the email or shortened address. Tap it again to sign out.
+- **PWA shell:** includes a web app manifest, service worker, standalone display mode, safe-area support, and visual-viewport sizing.
+- **Responsive layout:** adapts between portrait phones, short landscape screens, tablets, desktops, and foldable-width displays without document scrolling.
 
-This version **does not create wallets, authenticate users, custody assets, or move funds**.
+## Technology
 
-## Run locally
+This project does **not** use Svelte, React, or another framework. It is intentionally dependency-free:
+
+- semantic HTML
+- responsive CSS Grid
+- JavaScript ES modules
+- Web Crypto (`SHA-256`) for demo-address derivation
+- Service Worker + Web App Manifest for the PWA shell
+
+GitHub Pages can host every file directly.
+
+## Run and test locally
 
 ```bash
+node --test tests/app.test.mjs
 python -m http.server 8080
 ```
 
 Open <http://localhost:8080>.
 
-## GitHub Pages
+## Security boundary
 
-The repository is a dependency-free static site. In GitHub, open **Settings → Pages**, choose **Deploy from a branch**, then select `main` and `/ (root)`.
+The generated address is a visual demonstration only. It is produced from a public email plus a fixed namespace and therefore **must never be treated as a private key, seed phrase, ownership proof, or secure wallet**. A real implementation should authenticate through university OAuth/OIDC and then create, connect, or recover wallet credentials through a reviewed key-management design.
 
-## Important security direction for later phases
-
-A public student email should not directly become a wallet private key. A production design should use university OAuth/OIDC only for identity verification, then create or connect wallet credentials using a reviewed key-management model. Never place OAuth client secrets, private keys, or GitHub tokens in this repository or frontend JavaScript.
+Never place OAuth client secrets, wallet keys, seed phrases, or GitHub tokens in frontend code or this repository.
