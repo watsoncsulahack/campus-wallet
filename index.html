@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0c1020" />
-  <meta name="description" content="Mick Wallet — a self-hosted campus wallet interface prototype." />
+  <meta name="theme-color" content="#071a2f" />
+  <meta name="description" content="Campus Wallet — mascot money and campus payments in one simple wallet." />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icon.svg" type="image/svg+xml" />
-  <title>Mick Wallet</title>
+  <title>Campus Wallet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,56 +16,60 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Mick Wallet home">
+      <a class="brand" href="#" aria-label="Campus Wallet home">
         <span class="brand-mark" aria-hidden="true"><i></i></span>
-        <span class="brand-name">Mick<span>Wallet</span></span>
+        <span class="brand-copy"><strong>Campus</strong><span>Wallet</span></span>
       </a>
-      <div class="network-pill" aria-label="Current network"><span></span><b>Campus Demo</b></div>
+      <div class="network-pill" aria-label="Current network"><span></span><b>CSUB Demo</b></div>
       <button class="login-button" id="loginButton" type="button" aria-haspopup="dialog">
         <span class="login-dot"></span><span id="loginLabel">Sign in</span>
       </button>
     </header>
 
-    <main class="wallet-layout" aria-label="Student wallet dashboard">
+    <main class="wallet-layout" aria-label="Campus Wallet dashboard">
       <section class="balance-panel panel">
-        <div class="panel-heading"><span>Portfolio balance</span><button class="eye-button" type="button" id="balanceToggle" aria-label="Hide balance">◉</button></div>
+        <div class="panel-heading"><span>Beach wallet</span><button class="eye-button" type="button" id="balanceToggle" aria-label="Hide balance">◉</button></div>
         <div class="balance-row"><h1 id="balance">$184.20</h1><span class="change">+2.4%</span></div>
-        <p class="account-subtitle" id="accountSubtitle">Sign in with your student email to activate this demo wallet.</p>
+        <p class="account-subtitle" id="accountSubtitle">Campus spending, mascot money, and rewards in one place.</p>
         <div class="primary-actions" aria-label="Wallet actions">
           <button type="button" data-action="Send"><span>↗</span><b>Send</b></button>
           <button type="button" data-action="Receive"><span>↙</span><b>Receive</b></button>
-          <button type="button" data-action="Pay"><span>⌗</span><b>Pay</b></button>
+          <button type="button" data-action="Pay"><span>⌁</span><b>Pay</b></button>
           <button type="button" data-action="Request"><span>＋</span><b>Request</b></button>
         </div>
       </section>
 
-      <section class="account-panel panel">
-        <div class="panel-heading"><span>Student account</span><span class="demo-badge">DEMO</span></div>
-        <div class="account-identity">
-          <div class="avatar" id="avatar">ST</div>
-          <div class="identity-text"><strong id="identityName">Not signed in</strong><span id="identityDetail">University identity</span></div>
-        </div>
-        <button class="address-card" id="copyAddress" type="button" disabled>
-          <span><small>Wallet address</small><code id="addressText">Connect to generate</code></span><b aria-hidden="true">▢</b>
-        </button>
-        <p class="security-note">Demo addresses only. No private key or real wallet is created.</p>
-      </section>
+      <div class="wallet-lower">
+        <section class="assets-panel panel">
+          <div class="panel-heading"><span>Assets</span><button type="button" class="quiet-button" data-action="Manage assets">Manage</button></div>
+          <div class="asset-list">
+            <button type="button" data-action="Shark Token asset">
+              <span class="asset-icon shark">S</span><span><b>Shark Token</b><small>2,450 SHARK</small></span><strong>$122.50</strong>
+            </button>
+            <button type="button" data-action="Campus USD asset">
+              <span class="asset-icon usd">$</span><span><b>Campus USD</b><small>61.70 cUSD</small></span><strong>$61.70</strong>
+            </button>
+            <button type="button" data-action="Meal credits asset" class="optional-row">
+              <span class="asset-icon meal">M</span><span><b>Meal Credits</b><small>8 meals</small></span><strong>8</strong>
+            </button>
+          </div>
+        </section>
 
-      <section class="assets-panel panel">
-        <div class="panel-heading"><span>Assets</span><button type="button" class="quiet-button" data-action="Manage assets">Manage</button></div>
-        <div class="asset-list">
-          <button type="button" data-action="Campus USD asset"><span class="asset-icon usd">$</span><span><b>Campus USD</b><small>184.20 cUSD</small></span><strong>$184.20</strong></button>
-          <button type="button" data-action="Campus Token asset"><span class="asset-icon campus">M</span><span><b>Mick Token</b><small>0 MICK</small></span><strong>$0.00</strong></button>
-        </div>
-      </section>
-
-      <section class="activity-panel panel">
-        <div class="panel-heading"><span>Activity</span><button type="button" class="quiet-button" data-action="All activity">View all</button></div>
-        <div class="activity-list">
-          <button type="button" data-action="Campus Café transaction"><span class="activity-icon">☕</span><span><b>Campus Café</b><small>Today · Lunch</small></span><strong>− $8.40</strong></button>
-          <button type="button" data-action="Jordan Lee transaction"><span class="activity-icon incoming">↓</span><span><b>Jordan Lee</b><small>Today · Received</small></span><strong class="positive">+ $24.00</strong></button>
-        </div>
-      </section>
+        <section class="activity-panel panel">
+          <div class="panel-heading"><span>Activity</span><button type="button" class="quiet-button" data-action="All activity">View all</button></div>
+          <div class="activity-list">
+            <button type="button" data-action="Seaside Grill transaction">
+              <span class="activity-icon">☀</span><span><b>Seaside Grill</b><small>Today · Lunch</small></span><strong>− $12.50</strong>
+            </button>
+            <button type="button" data-action="Shark Token reward">
+              <span class="activity-icon incoming">↓</span><span><b>Shark reward</b><small>Today · Campus event</small></span><strong class="positive">+ 50 S</strong>
+            </button>
+            <button type="button" data-action="Campus Bookstore transaction" class="optional-row">
+              <span class="activity-icon book">B</span><span><b>Bookstore</b><small>Yesterday · Supplies</small></span><strong>− $26.80</strong>
+            </button>
+          </div>
+        </section>
+      </div>
     </main>
 
     <nav class="mobile-nav" aria-label="Wallet navigation">
@@ -77,8 +81,11 @@
 
   <dialog class="login-dialog" id="loginDialog" aria-labelledby="loginTitle">
     <form method="dialog" class="modal-card" id="loginForm">
-      <div class="modal-top"><div><p>ACCESS YOUR WALLET</p><h2 id="loginTitle">Sign in to Mick</h2></div><button class="close-button" value="cancel" aria-label="Close sign-in">×</button></div>
-      <p class="modal-copy">Use your student identity today. Additional university wallet providers can plug in later.</p>
+      <div class="modal-top">
+        <div><p>ACCESS YOUR CAMPUS WALLET</p><h2 id="loginTitle">Sign in to Campus Wallet</h2></div>
+        <button class="close-button" id="closeLogin" type="button" aria-label="Close sign-in">×</button>
+      </div>
+      <p class="modal-copy">Use your student identity for this demo. University wallet providers can plug in later.</p>
       <label for="studentEmail">Student email</label>
       <div class="email-row"><input id="studentEmail" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@university.edu" required /><button type="submit" id="emailSignIn">Continue</button></div>
       <p class="field-error" id="emailError" role="alert"></p>

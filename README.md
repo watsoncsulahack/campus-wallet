@@ -1,12 +1,13 @@
-# Mick Wallet
+# Campus Wallet
 
-A one-viewport, mobile-first campus wallet interface prototype. The live app is designed to feel like a self-hosted progressive web wallet rather than a marketing landing page.
+A one-viewport, mobile-first campus payments and mascot-money prototype. Each participating campus can apply its own identity and issue branded digital value; this CSUB-flavored demo uses **Shark Tokens**.
 
 ## Current demo behavior
 
 - **Student email:** entering a valid email signs in and derives a deterministic, Ethereum-shaped **public demo address** with the browser Web Crypto API.
 - **Connect a wallet:** closes the sign-in dialog and uses a fixed Ethereum-shaped placeholder address.
 - **Signed-in state:** the top-right control turns green and displays the email or shortened address. Tap it again to sign out.
+- **Dummy wallet data:** the balance, Shark Tokens, Campus USD, meal credits, and activity are visual prototype data.
 - **PWA shell:** includes a web app manifest, service worker, standalone display mode, safe-area support, and visual-viewport sizing.
 - **Responsive layout:** adapts between portrait phones, short landscape screens, tablets, desktops, and foldable-width displays without document scrolling.
 

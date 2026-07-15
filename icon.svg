@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="130" fill="#7c5cff"/><path d="M314 133H214c-44 0-80 36-80 80v86c0 44 36 80 80 80h100v-63h-92c-15 0-27-12-27-27v-66c0-15 12-27 27-27h92z" fill="white"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#123654"/>
+      <stop offset="1" stop-color="#071a2f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f8d98e"/>
+      <stop offset="1" stop-color="#d89723"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="130" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#f3bd4d" stroke-opacity=".18" stroke-width="18"/>
+  <path d="M124 343c67-71 132-178 164-227 15 71 49 149 103 227-48-30-89-38-132-15-42-22-83-18-135 15Z" fill="url(#gold)"/>
+  <path d="M116 364c82-38 156-37 280 0" fill="none" stroke="#54b6b0" stroke-width="20" stroke-linecap="round"/>
+</svg>
