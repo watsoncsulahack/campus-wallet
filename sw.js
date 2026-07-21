@@ -1,4 +1,4 @@
-const CACHE = "campus-wallet-v3";
+const CACHE = "campus-wallet-neutral-v1";
 const ASSETS = [
   "./",
   "./index.html",

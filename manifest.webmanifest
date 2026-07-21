@@ -1,1 +1,12 @@
-{"name":"Campus Wallet","short_name":"Campus","description":"Mascot money and campus payments in one simple wallet","start_url":"./","display":"standalone","background_color":"#04111f","theme_color":"#071a2f","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "Campus Wallet",
+  "short_name": "Campus Wallet",
+  "description": "Vendor-neutral reference interface for account-based campus payments",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f8",
+  "theme_color": "#f3f5f8",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

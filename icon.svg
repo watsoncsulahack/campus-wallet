@@ -1,16 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#123654"/>
-      <stop offset="1" stop-color="#071a2f"/>
-    </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#f8d98e"/>
-      <stop offset="1" stop-color="#d89723"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="130" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="170" fill="none" stroke="#f3bd4d" stroke-opacity=".18" stroke-width="18"/>
-  <path d="M124 343c67-71 132-178 164-227 15 71 49 149 103 227-48-30-89-38-132-15-42-22-83-18-135 15Z" fill="url(#gold)"/>
-  <path d="M116 364c82-38 156-37 280 0" fill="none" stroke="#54b6b0" stroke-width="20" stroke-linecap="round"/>
+  <rect width="512" height="512" rx="124" fill="#344155"/>
+  <rect x="102" y="138" width="308" height="236" rx="70" fill="#f7f8fa"/>
+  <path d="M102 204c0-37 30-66 66-66h170c40 0 72 32 72 72v12H176c-41 0-74 33-74 74Z" fill="#e9edf2"/>
+  <path d="M294 218h125v108H294c-30 0-54-24-54-54s24-54 54-54Z" fill="#fff" stroke="#344155" stroke-width="18"/>
+  <circle cx="302" cy="272" r="13" fill="#344155"/>
 </svg>
